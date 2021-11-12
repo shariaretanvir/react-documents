@@ -1,0 +1,25 @@
+React Router
+1.	Add a js file separate named AppRoute.js
+2.	Install;l react-router-dom  -- command -> npm i react-router-dom
+3.	Import all the pages that you need to navigate
+4.	Import Route, Switch from  react router using -> import { Route, Switch, NavLink, Link } from "react-router"; and also like this code
+return (
+      <Fragment>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/contact" component={Contact}></Route>
+        </Switch>
+      </Fragment>
+    );
+5.	Also you need to navigate the pages from components.
+6.	For this you need to import -> import { Route, Switch, NavLink, Link } from "react-router-dom";
+7.	Use link as ->  <NavLink to="/">Back to home</NavLink>
+8.	Also in the app js where the router component will placed import there browser router from react router dom.
+9.	Then placed approytter.js  component
+ 
+Reacr lifecycle methods
+
+1.	Componentdidmount - > it gets called after the component establish or dom gets ready.
+2.	Componentdidupdate - > it gets called after the component is loaded and user do some actions.
+React select search
+
