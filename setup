@@ -1,0 +1,113 @@
+1.	First install node latest version and then install yarn.
+2.	If react app is already install in your machine then uninstall it first with 
+“npm uninstall -g create-react-app” and then install it globally with 
+“npm install -g create-react-app” then install project with “npx create-react-app <Name of your app>”
+3.	Then go to the project folder and command code . to run the project using vscode.
+4.	To run project use npm start
+
+
+Install globall plugins
+
+1.	ESLint by Dirk Baeumer
+2.	Prettier - Code formatter by Prettier
+3.	Auto rename
+4.	Es7 react/redux extension (suggestions,template)
+5.	One Dark Pro (theme)
+6.	Code Spell Checker
+7.	Quokka.js (for suggestion) 
+8.	IntelliSense for CSS class names in HTML
+
+
+
+
+
+
+Lint and other dependencies install
+
+1.	yarn add -D prettier
+2.	yarn add -D babel-eslint
+3.	npm install -g install-peerdeps
+4.	npx install-peerdeps --dev eslint-config-airbnb
+5.	yarn add -D eslint-config-prettier eslint-plugin-prettier
+6.	 create a file names .eslintrc and put the code on there
+7.	{
+8.	    "extends": [
+9.	      "airbnb",
+10.	      "airbnb/hooks",
+11.	      "eslint:recommended",
+12.	      "prettier",
+13.	      "plugin:jsx-a11y/recommended"
+14.	    ],
+15.	    "parser": "babel-eslint",
+16.	    "parserOptions": {
+17.	      "ecmaVersion": 8
+18.	    },
+19.	    "env": {
+20.	      "browser": true,
+21.	      "node": true,
+22.	      "es6": true,
+23.	      "jest": true
+24.	    },
+25.	    "rules": {
+26.	      "react/react-in-jsx-scope": 0,
+27.	      "react-hooks/rules-of-hooks": "error",
+28.	      "no-console": 0,
+29.	      "react/state-in-constructor": 0,
+30.	      "indent": 0,
+31.	      "linebreak-style": 0,
+32.	      "react/prop-types": 0,
+33.	      "jsx-a11y/click-events-have-key-events": 0,
+34.	      "react/jsx-filename-extension": [
+35.	        1,
+36.	        {
+37.	          "extensions": [".js", ".jsx"]
+38.	        }
+39.	      ],
+40.	      "prettier/prettier": [
+41.	        "error",
+42.	        {
+43.	          "trailingComma": "es5",
+44.	          "singleQuote": true,
+45.	          "printWidth": 100,
+46.	          "tabWidth": 4,
+47.	          "semi": true,
+48.	          "endOfLine": "auto"
+49.	        }
+50.	      ]
+51.	    },
+52.	    "plugins": ["prettier", "react", "react-hooks"]
+53.	  }
+
+7.  for editor setup in workspace , go to the workspace settings json and paste the code
+
+{
+  // Theme
+  // "workbench.colorTheme": "Dracula",
+
+  // config related to code formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "javascript.validate.enable": false, //disable all built-in syntax checking
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.organizeImports": true
+  },
+  "eslint.alwaysShowStatus": true,
+  // emmet
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
+
+
